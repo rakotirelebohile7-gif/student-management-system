@@ -1,0 +1,299 @@
+/* Layout Alignment Architecture */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f7fe;
+  color: #2b3674;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.dashboard-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Dashboard Navigation Menu Panels */
+.sidebar {
+  width: 260px;
+  background-color: #ffffff;
+  padding: 30px 20px;
+  border-right: 1px solid #e0e5f2;
+}
+
+.sidebar .logo h2 {
+  color: #4318ff;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sidebar-campus {
+  font-size: 11px;
+  color: #a3aed0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: -35px;
+  margin-bottom: 5px;
+}
+
+.sidebar-location {
+  font-size: 11px;
+  color: #4318ff;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.nav-menu a {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  color: #a3aed0;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+  background-color: #f4f7fe;
+  color: #4318ff;
+}
+
+.nav-menu .icon {
+  margin-right: 14px;
+}
+
+/* Main Workspace Framework Area */
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.header-brand h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #1b2559;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #a3aed0;
+  margin-top: 4px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  background: #4318ff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.user-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #1b2559;
+  font-weight: 700;
+}
+
+.user-role {
+  font-size: 11px;
+  color: #a3aed0;
+  font-weight: 500;
+}
+
+/* --- Visual Dashboard Elements with Background Images --- */
+
+/* Main Banner (Students Excelling and Learning) */
+.showcase-banner {
+  width: 100%;
+  height: 200px;
+  background-image: url('https://unsplash.com');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(67, 24, 255, 0.15);
+}
+
+.banner-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(67, 24, 255, 0.85) 0%, rgba(27, 37, 89, 0.6) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  color: #ffffff;
+}
+
+.banner-overlay h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.banner-overlay p {
+  font-size: 14px;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+/* Modern Widgets/Stats Section Layout Grid */
+.visual-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 1024px) {
+  .visual-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(112, 144, 176, 0.05);
+  height: 150px;
+}
+
+.stat-card h3 {
+  font-size: 14px;
+  color: #a3aed0;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.stat-card .stat-number {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b2559;
+}
+
+.stat-card .stat-trend {
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+.stat-trend.positive { color: #05cd99; }
+
+/* Image Card: Students Collaborating & Signing Documents around tables */
+.image-card-activity {
+  background-image: url('https://unsplash.com');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+/* Image Card: Graduate outcomes showing success/achievement */
+.image-card-success {
+  background-image: url('https://unsplash.com');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+/* Semi-transparent text protection overlay layers */
+.card-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(27, 37, 89, 0.95) 10%, rgba(27, 37, 89, 0.4) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.card-image-overlay h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.card-image-overlay p {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.action-bar-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+
+.btn-add-primary {
+  background: #4318ff;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.btn-add-primary:hover {
+  background: #3311cc;
+  transform: translateY(-1px);
+}
+
+/* Table Card Frame Shell Containers */
+.card-wrapper {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(112, 144, 176, 0.05);
+}
+
+.card-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1b2559;
+  margin-bottom: 20px;
+}
